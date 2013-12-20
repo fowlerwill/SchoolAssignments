@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=aValue\ aSuit
+comment0.target=Card(int,\ char)
+comment0.text=\r\n\ Card\ constructor,\ \r\n\ takes\ aValue\ 1-13\ and\ aSuit\ 'D',\ 'H',\ 'S'\ or\ 'C'\r\n\ if\ erronious\ values\ are\ entered\ in\ either\ field,\ the\ card\ will\ return\ with\ either\ \r\n\ theSuit\ as\ '0'\r\n\ or\ \r\n\ theValue\ as\ 0\ \r\n
+comment1.params=
+comment1.target=int\ value()
+comment1.text=\r\n\ Value\ returner,\ returns\ the\ value\ of\ the\ the\ card\ object\ as\ an\ int.\ \r\n
+comment2.params=Pretty
+comment2.target=java.lang.String\ value(char)
+comment2.text=\r\n\ Overloaded\ version\ of\ value()\ This\ method\ will\ return\ \r\n\ 'A'\ for\ theValue\ \=\ 1\r\n\ 'J'\ for\ theValue\ \=\ 11\r\n\ 'Q'\ for\ theValue\ \=\ 12\r\n\ 'K'\ for\ theValue\ \=\ 13\r\n\ when\ given\ the\ input\ 'P'\r\n
+comment3.params=
+comment3.target=char\ suit()
+comment3.text=\r\n\ suit\ Returns\ the\ suit\ of\ the\ card.\r\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment4.text=\r\n\ toString\ returns\ a\ string\ of\ the\ card\ in\ the\ format\:\r\n\ theValue\ of\ theSuit\r\n
+numComments=5

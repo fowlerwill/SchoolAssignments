@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=input
+comment0.target=Transcript(java.io.FileInputStream)
+comment1.params=
+comment1.target=boolean\ hasNextCourse()
+comment2.params=
+comment2.target=Course\ nextCourse()
+numComments=3

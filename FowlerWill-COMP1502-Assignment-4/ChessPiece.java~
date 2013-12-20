@@ -1,0 +1,68 @@
+
+/**
+ * Abstract class ChessPiece - write a description of the class here
+ * 
+ * @author Will Fowler
+ * @version 02 April 2013
+ */
+public abstract class ChessPiece
+{
+    // instance variables - replace the example below with your own
+    protected int         row;
+    protected int         col;
+    protected int         player;
+    protected ChessBoard  gameBoard;
+
+    /**
+     * Default constructor sets position of object.
+     */
+    public ChessPiece(int aCol, int aRow, int aPlayer, ChessBoard aBoard)
+    {
+        row = aRow;
+        col = aCol;
+        player = aPlayer;
+        gameBoard = aBoard;
+    }
+    
+    public int getPlayer()  { return player; }
+    public int getRow()     { return row; }
+    public int getCol()     { return col; }
+    public String getPos()
+    {
+        return "(" + this.getCol() + "," + this.getRow() + ")";
+    }
+    
+    public boolean validMove()
+    {
+        return true;
+    }
+    
+    public void move()
+    {
+        //filled in in subclasses
+    }
+    
+    /*public void move(char dir, int spaces)
+    {
+        gameBoard.removePieceAtLocation(row, col);
+        switch(dir)
+        {
+            case 'U': row -= spaces;
+            break;
+            case 'D': row += spaces;
+            break;
+            case 'L': col -= spaces;
+            break;
+            case 'R': col += spaces;
+        }
+        gameBoard.updatePieceLocation(this);
+    }*/
+    
+    /**
+     * Movers Move simply a single space in each specified direction
+     */
+    public void moveUp(){   row -= 1;}
+    public void moveDown(){ row += 1;}
+    public void moveLeft(){ col -= 1;}
+    public void moveRight(){col += 1;}
+}

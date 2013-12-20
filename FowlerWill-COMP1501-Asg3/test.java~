@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class test
+{
+    public static void main(String args[])
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter license plate number:\t");
+        String licenseNumber = scanner.next();
+        
+        int intLicenseNum = Integer.parseInt(licenseNumber.substring(4,7));
+        
+        System.out.println(intLicenseNum);
+        
+    }
+}

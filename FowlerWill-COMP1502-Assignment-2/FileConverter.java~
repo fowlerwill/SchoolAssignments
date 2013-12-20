@@ -1,0 +1,19 @@
+
+/**
+ * Write a description of class fileConverter here.
+ * 
+ * @author Will Fowler
+ * @version 0.1
+ * you know, a class that pulls in a line of string and converts it to an array of chars
+ */
+public class FileConverter
+{
+    public FileConverter(int row, String inputLine, char theBoard[][])
+    {
+        for(int col=0; col<Board.GRID_WIDTH; col++)
+        {
+            theBoard[row][col] = inputLine.charAt(col);
+        }
+    }
+    
+}

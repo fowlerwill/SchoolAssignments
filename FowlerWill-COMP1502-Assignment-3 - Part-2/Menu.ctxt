@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=aDeck
+comment0.target=Menu(Deck)
+comment0.text=\r\n\ Constructor\ for\ the\ Menu.\ \r\n\ Accepts\ the\ Deck\ object\r\n\ \r\n
+comment1.params=menuChoice\ aPlayer
+comment1.target=void\ menuQuery(char,\ Player)
+comment1.text=\r\n\ menuQuery\ accepts\ a\ char\ menuchoice\ from\ the\ menu\ and\ enacts\ the\ appropriate\ actions\:\r\n\ 1\:\ Play\ Punto\ Banko\r\n\ 2\:\ Play\ Hi\ Lo\r\n\ Q\:\ Quit\r\n
+comment2.params=
+comment2.target=boolean\ haveTheyQuit()
+comment2.text=\r\n\ haveTheyQuit()\ \ method\ returns\ the\ isDone\ boolean,\ which\ is\ flipped\ by\r\n\ 'Q'\ selection\ in\ menuQuery\ by\ the\ user.\r\n
+comment3.params=bet\ aPlayer\ aBetAmount
+comment3.target=void\ puntoBancoGame(char,\ Player,\ double)
+comment3.text=\r\n\ punto\ banko\ menu\ method\ sets\ up\ a\ game\ of\ punto\ banko\ to\ be\ played\r\n\ bet\ is\ a\ char\:\r\n\ \ P\:\ Player\ Wins\ \u2013\ This\ bet\ pays\ out\ if\ the\ Player\ (Punto)\ wins.\r\n\ \ \ \ \ \ \ \ B\:\ Banker\ Wins\ \u2013\ This\ bet\ pays\ out\ if\ the\ Banker\ (Banco)\ wins.\r\n\ \ \ \ \ \ \ \ T\:\ Tie\ Game\ \u2013\ This\ bet\ pays\ out\ if\ there\ is\ a\ tie\ (Egalite).\r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ aPlayer\ is\ the\ player\ doing\ the\ betting,\r\n\ \ \ \ \ \ \ aBetAmount\ is\ the\ amount\ bet.\r\n
+comment4.params=bet\ aPlayer
+comment4.target=void\ hiLoGame(double,\ Player)
+comment4.text=\r\n\ HiLo\ Game\ builder\r\n
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\r\n\ toString\ Method.\ prints\ the\ menu.\r\n
+numComments=6

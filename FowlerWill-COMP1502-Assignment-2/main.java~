@@ -1,0 +1,32 @@
+import java.util.Scanner;
+import java.lang.Character;
+/*
+ * *Will Fowler 
+ * *
+ * *This is a main class that will run a sudoko game that can have the user enter coordinates or a file 
+ * *to fill in and validate a sudoku game.
+ */
+
+public class main
+{
+    
+    public static void main(String args[])
+    {
+        final int   GRID_WIDTH  = 9;
+        Scanner keyboard = new Scanner(System.in);
+        //create new board & menu
+        Board aBoard = new Board();
+        Menu aMenu = new Menu();       
+        char menuInput;
+        
+        System.out.print("Welcome to a Sudoku program by Will Fowler.\n\n");
+        
+        while(true) 
+        {
+            //prompt user for entry, feed to menu
+            System.out.println(aMenu.toString());
+            menuInput = keyboard.next().toUpperCase().charAt(0);
+            aMenu.menuQuery(menuInput, aBoard);
+        }
+    }
+}

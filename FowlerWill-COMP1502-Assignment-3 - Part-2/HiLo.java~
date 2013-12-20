@@ -1,0 +1,132 @@
+/**
+ * Hi Lo Card Game 
+ * @author Will Fowler
+ * @date 26 Mar 2013
+ */
+
+import java.util.*;
+public class HiLo
+{
+    private Deck playerDeck;
+    private Deck bankerDeck;
+    private Scanner keyboard = new Scanner(System.in);
+    /**
+     * default constructor class
+     */
+    public HiLo(double aBet, Player aPlayer)
+    {
+        //make a player and banker deck
+        playerDeck = new Deck();
+        bankerDeck = new Deck();
+        playerDeck.shuffle();
+        bankerDeck.shuffle();
+        boolean playAgain = true;
+        char choice = ' ';
+        char winner = ' ';
+        
+        while(playAgain)
+        {
+            winner = game();
+            if(winner == 'W')
+            {
+                aPlayer.setWallet(aPlayer.getWallet() + aBet);
+                System.out.println("You won: $" + aBet + " you now have $" + aPlayer.getWallet() + " in your account");
+            } else if(winner == 'S')
+            {
+                aPlayer.setWallet(aPlayer.getWallet() + aBet * 4 );
+                System.out.println("You won: $" + aBet + " you now have $" + aPlayer.getWallet() + " in your account");
+            }
+            else
+            {} //do nothing.
+            
+            aPlayer.store();
+            
+            do
+            {
+                System.out.println("Play again? y/n");
+                choice = keyboard.next().toUpperCase().charAt(0);
+            }
+            while(choice != 'Y' && choice != 'N');
+            
+            if(choice == 'N')
+                playAgain = false;
+        }
+    }
+    
+    /**
+     * game plays the game once, prompts the user for their guess, 
+     * and returns a W for a regular win, S for tie win, and T for tie
+     */
+    public char game()
+    {
+        char choice = ' ';
+        char winner = ' ';
+
+        //deal a card for the player
+        Card playerCard = playerDeck.dealACard();
+        System.out.println("Your Card: " + playerCard);
+        
+        //prompt for guess
+        do
+        {
+            System.out.println("Will the banker's card be...\n" + 
+                            "\tH: Higher\n" +
+                            "\tL: Lower\n" +
+                            "\tS: Same\n");
+            choice = keyboard.next().toUpperCase().charAt(0);
+        }
+        while(choice != 'H' && choice != 'L' && choice != 'S');
+        
+        //Deal the dealer's card
+        Card bankerCard = bankerDeck.dealACard();
+        System.out.println("Banker's Card: " + bankerCard);
+        
+        //compare the two & determine winner
+        if( playerCard.value() > bankerCard.value() )
+        {
+            //lower wins
+            if( choice == 'L')
+            {
+                System.out.println("You win!");
+                winner = 'W';
+            }
+            else
+                System.out.println("You lose!");
+        }
+        else if( playerCard.value() < bankerCard.value() )
+        {
+            //higher wins
+            if( choice == 'H')
+            {
+                System.out.println("You win!");
+                winner = 'W';
+            }
+            else
+                System.out.println("You lose!");
+        }
+        else
+        {
+            //tie, compare suits
+            if( playerCard.suit() == bankerCard.suit() )
+            {
+                //complete tie, no winne
+                System.out.println("it's a total tie :-/");
+                winner = 'T';
+            }
+            else
+            {
+                //same wins
+                if( choice == 'S')
+                {
+                    System.out.println("You win!");
+                    winner = 'S';
+                }
+                else
+                    System.out.println("You lose!");
+            }
+        }
+        
+        return winner;
+    }
+
+}

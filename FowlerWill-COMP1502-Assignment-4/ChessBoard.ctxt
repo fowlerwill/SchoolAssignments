@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=
+comment0.target=ChessBoard()
+comment0.text=\r\n\ Constructor\ for\ Chessboard\ -\ puts\ the\ pieces\ int\ ehir\ place\r\n
+comment1.params=
+comment1.target=boolean\ winCondition()
+comment1.text=\r\n\ checks\ for\ win\ condition,\ prints\ winner,\ returns\ boolean\ true\ if\ game\ over\r\n
+comment2.params=col\ row
+comment2.target=ChessPiece\ selectPiece(int,\ int)
+comment2.text=\r\n\ selectPiece\ selects\ a\ piece\ off\ the\ board,\ returns\ null\ if\ empty\r\n\ @params\ col\ row\r\n
+comment3.params=col\ row\ piece
+comment3.target=void\ setPieceAtLocation(int,\ int,\ ChessPiece)
+comment3.text=\r\n\ setPieceAtLocation\ puts\ the\ passed\ piece\ at\ the\ passed\ location\r\n\ @params\ col\ row\ Chesspiece\r\n
+comment4.params=col\ row
+comment4.target=void\ removePieceAtLocation(int,\ int)
+comment4.text=\r\n\ removePieceAtLocation\ removes\ a\ piece\ at\ the\ given\ coords\r\n\ @params\ col\ row\r\n
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\r\n\ toString\ prints\ the\ thing\!\r\n
+numComments=6

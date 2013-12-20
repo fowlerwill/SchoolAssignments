@@ -1,0 +1,13 @@
+public class main
+{
+    
+    public static void main(String args[])
+    {
+        //
+        Card aCard = new Card(10, 'D');
+        System.out.println(aCard.value() + " .value()");
+        System.out.println(aCard.value('P') + " .value('P')");
+        System.out.println(aCard.suit() + " .suit()");
+        System.out.println(aCard.pretty() + " .pretty()");
+    }
+}

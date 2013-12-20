@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=gameType\ aPlayer\ aBet
+comment0.target=PuntoBanco(char,\ Player,\ double)
+comment0.text=\r\n\ Default\ constructor\ takes\ the\ player,\ who\ they\ bet\ on\ and\ how\ much.\r\n
+comment1.params=aDeck
+comment1.target=char\ game(Deck)
+comment1.text=\r\n\ PuntoBanco.game\ is\ the\ actual\ game\ mechanics\ for\ the\ card\ game,\ descisions\ listed\ with\ inline\ comments.\r\n\ returns\ a\ char\ of\ the\ winner\ ('P'\ \=\ player,\ 'B'\ \=\ banker,\ 'T'\ \=\ tie)\r\n
+comment2.params=hand
+comment2.target=int\ handValue(java.util.ArrayList)
+comment2.text=\r\n\ Hand\ Value\ adds\ the\ value\ of\ all\ cards\ in\ the\ hand\ passed\ to\ it,\ and\ returns\ the\ result\ mod\ 10\r\n
+comment3.params=hand
+comment3.target=java.lang.String\ printHand(java.util.ArrayList)
+comment3.text=\r\n\ printHand\ returns\ a\ string\ of\ every\ card\ in\ the\ hand\ passed\ to\ it\r\n
+numComments=4

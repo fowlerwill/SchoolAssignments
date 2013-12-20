@@ -1,0 +1,29 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Board()
+comment0.text=\r\n\ builds\ a\ board,\ by\ calling\ the\ clear\ method\r\n
+comment1.params=
+comment1.target=void\ clear()
+comment1.text=\r\n\ sets\ all\ values\ in\ theBoared\ to\ a\ space\ char.\r\n
+comment2.params=row\ col
+comment2.target=char\ getBoard(int,\ int)
+comment2.text=\r\n\ returns\ the\ char\ at\ the\ given\ row\ and\ col\r\n
+comment3.params=row\ inputLine
+comment3.target=void\ readFile(int,\ java.lang.String)
+comment3.text=\r\n\ reads\ a\ line\ of\ text,\ checks\ if\ the\ row\ given,\ or\ the\ column\ are\ beyond\ range\ of\ theBoard,\ and\ writes\ the\ values\ to\ their\ corresponding\r\n\ positions.\r\n\ TO\ DO\:\ clear\ the\ board\ if\ an\ error\ is\ found.\r\n
+comment4.params=
+comment4.target=boolean\ verify()
+comment4.text=\r\n\ verify\ checks\ the\ rows,\ columns\ and\ boxes\ of\ theBoard\ for\ duplicates.\r\n\ if\ checks\ in\ rows\ and\ columns\ for\ missing\ spaces,\r\n\ as\ it\ advances\ through\ positions\ it\ passes\ the\ current\ char\ in\ theBoard\ to\ checkAgainst,\ which\ will\ flip\ true\ for\ each\ char.\r\n\ if\ checkAgainst\ is\ already\ true,\ the\ verifier\ knows\ that\ that\ position\ already\ exists,\ and\ will\ return\ the\ corresponding\ error.\r\n
+comment5.params=y\ x
+comment5.target=void\ checkAgainst(int,\ int)
+comment5.text=\r\n\ private\ method\ that\ will\ flip\ a\ corresponding\ indicie\ to\ true\ given\ char\ of\ board\ at\ position\ x,\ y.\r\n\ ie\:\ board[0][0]\ \=\ '1'\ means\ checkAgainstBoolean[1]\ \=\ true;\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ^\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ^\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this\ value\ \ \ \ \ \ flips\ \ \ \ \ \ \ \ this\ position\r\n
+comment6.params=
+comment6.target=void\ resetCheckAgainst()
+comment6.text=\r\n\ resets\ the\ checkAgainstBoolean\ to\ all\ false\ values,\ so\ that\ the\ next\ condition\ can\ be\ checked\r\n
+comment7.params=row\ col\ val
+comment7.target=void\ setVal(int,\ int,\ char)
+comment7.text=\r\n\ sets\ a\ value\ at\ given\ row\ and\ col\ of\ theBoard\r\n
+comment8.params=
+comment8.target=java.lang.String\ toString()
+comment8.text=\r\n\ returns\ a\ string\ that\ has\ the\ board\ embedded\ in\ a\ nice\ graphic\ to\ seperate\ the\ values\ and\ aid\ the\ user\ in\ setting\ values\ by\ \r\n\ providing\ axis\ labels.\r\n
+numComments=9

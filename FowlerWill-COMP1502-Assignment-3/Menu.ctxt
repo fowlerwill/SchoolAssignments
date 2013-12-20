@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=aDeck
+comment0.target=Menu(Deck)
+comment0.text=\r\n\ Constructor\ for\ the\ Menu.\ \r\n\ Accepts\ the\ Deck\ object\r\n\ \r\n
+comment1.params=menuChoice
+comment1.target=void\ menuQuery(char)
+comment1.text=\r\n\ menuQuery\ accepts\ a\ char\ menuchoice\ from\ the\ menu\ and\ enacts\ the\ appropriate\ actions\:\r\n\ N\:\ New\ Deck\r\n\ \ \ \ \ \ \ S\:\ Shuffle\ Deck\r\n\ \ \ \ \ \ \ T\:\ Top\ Card\r\n\ \ \ \ \ \ \ C\:\ Cut\ The\ Deck\r\n\ \ \ \ \ \ \ D\:\ Deal\ Hands\r\n\ \ \ \ \ \ \ Q\:\ Quit\r\n
+comment2.params=
+comment2.target=boolean\ haveTheyQuit()
+comment2.text=\r\n\ haveTheyQuit()\ \ method\ returns\ the\ isDone\ boolean,\ which\ is\ flipped\ by\r\n\ 'Q'\ selection\ in\ menuQuery\ by\ the\ user.\r\n
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment3.text=\r\n\ toString\ Method.\ prints\ the\ menu.\r\n
+numComments=4

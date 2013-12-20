@@ -1,0 +1,57 @@
+-----------------------
+Item No:	12345
+Item Name:	Widgets
+Unit Cost:	1.45
+Selling Price:	2.03
+-----------------------
+-----------------------
+Item No:	987654
+Item Name:	Gadget
+Unit Cost:	2.36
+Selling Price:	2.95
+-----------------------
+
+528 Units added to Widgets onOrder
+343 Units added to Gadget onOrder
+New Gadget unit cost: 2.64
+New Gadget sell price: 3.58
+266 Widgets Units Ordered by customer
+	507	Units onHand
+	266	Units commited
+478 Gadget Units Ordered by customer
+	56	Units onHand
+	478	Units commited
+500 Widgets Units received.
+	1007	Units onHand
+	28	Units onOrder
+343 Gadget Units received.
+	399	Units onHand
+	0	Units onOrder
+266 Widgets Units Shipped
+239 Gadget Units Shipped
+Profit from Widgets: 0.58
+Profit from Gadget: 0.94
+Total Profit: 378.18
+125 Widgets Units Returned
+-----------------------
+Inventory Number:	12345
+Inventory Name:		Widgets
+Amount on Hand:		882
+Amount Committed:	0
+Amount on Order:	28
+Unit Cost:			$1.45
+Selling Price:		$2.03
+Value of item:		$1278.9
+-----------------------
+
+-----------------------
+Inventory Number:	987654
+Inventory Name:		Gadget
+Amount on Hand:		399
+Amount Committed:	239
+Amount on Order:	0
+Unit Cost:			$2.64
+Selling Price:		$3.58
+Value of item:		$1686.36
+-----------------------
+Total Inventory Value:	$2965.26

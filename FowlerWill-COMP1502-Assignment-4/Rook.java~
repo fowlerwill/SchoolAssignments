@@ -1,0 +1,17 @@
+public class Rook extends ChessPiece
+{
+    public Rook(int aRow, int aCol, int aPlayer, ChessBoard aBoard)
+    {
+        super(aRow, aCol, aPlayer, aBoard);
+    }
+    
+    public void move()
+    {
+        super.moveUp();        
+    }
+    
+    public String toString()
+    {
+        return "R";
+    }
+}

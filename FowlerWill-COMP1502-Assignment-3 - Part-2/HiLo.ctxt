@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=aBet\ aPlayer
+comment0.target=HiLo(double,\ Player)
+comment0.text=\r\n\ default\ constructor\ class\r\n
+comment1.params=
+comment1.target=char\ game()
+comment1.text=\r\n\ game\ plays\ the\ game\ once,\ prompts\ the\ user\ for\ their\ guess,\ \r\n\ and\ returns\ a\ W\ for\ a\ regular\ win,\ S\ for\ tie\ win,\ and\ T\ for\ tie\r\n
+numComments=2

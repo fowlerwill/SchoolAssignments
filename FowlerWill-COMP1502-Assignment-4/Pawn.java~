@@ -1,0 +1,32 @@
+public class Pawn extends ChessPiece
+{
+    public Pawn(int aCol, int aRow, int aPlayer, ChessBoard aBoard)
+    {
+        super(aCol, aRow, aPlayer, aBoard);
+    }
+    
+    public void move()
+    {
+        if(player == 1)
+            super.moveUp();        
+        else
+            super.moveDown();
+    }
+    
+    public boolean validMove(int destinationX, int destinationY)
+    {
+        return true;
+    }
+    
+    /**
+     * canItMoveThere returns a boolean true if the move is 
+     */
+    
+    public String toString()
+    {
+        if(player == 0)
+            return "P";
+        else
+            return "p";
+    }
+}

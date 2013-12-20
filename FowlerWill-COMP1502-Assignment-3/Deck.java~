@@ -1,0 +1,35 @@
+/**
+ * Deck Class By Will Fowler
+ * March 6 2013
+ * 
+ */
+public class Deck
+{
+    ArrayList <Card> theDeck;
+    theDeck = new ArrayList <Card>();
+    /**
+     * create the deck with 52 cards, 
+     * ordered from ace to king of spades, hearts, clubs, and diamonds
+     */
+    public Deck()
+    {
+        char suit;
+        
+        for(int s=1; s<5; s++)
+        {
+            if(s == 1)
+                suit = 'S';
+            else if(s == 2)
+                suit = 'H';
+            else if(s == 3)
+                suit = 'C';
+            else
+                suit = 'D';
+                
+            for(int i=1; i<14; i++)
+            {
+                theDeck.add(Card(i, suit));
+            }
+        }
+    }
+}

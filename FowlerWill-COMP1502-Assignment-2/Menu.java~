@@ -1,0 +1,118 @@
+import java.util.Scanner;
+import java.util.*;
+import java.io.*;
+/*
+ * *Will Fowler 
+ * *
+ * *Menu class that does a menu
+ */
+
+public class Menu
+{
+    Scanner keyboard = new Scanner(System.in);
+
+    public void menuQuery(char menuEntry, Board theBoard)
+    {
+        if (menuEntry == 'C')
+            this.clearGrid(theBoard);
+        else if (menuEntry == 'R')
+            this.readGrid(theBoard);
+        else if (menuEntry == 'D')
+            this.dispGrid(theBoard);
+        else if (menuEntry == 'S')
+            this.setGridVal(theBoard);
+        else if (menuEntry == 'V')
+            this.verify(theBoard);
+        else if (menuEntry == 'W')
+            this.writeGrid();
+        else if (menuEntry == 'Q')
+            this.quit();
+        else if (menuEntry == 'N')
+            this.toString();
+        else if (   menuEntry != 'C' ||
+                    menuEntry != 'R' ||
+                    menuEntry != 'D' ||
+                    menuEntry != 'S' ||
+                    menuEntry != 'V' ||
+                    menuEntry != 'W' ||
+                    menuEntry != 'Q' ||
+                    menuEntry != 'R' ||
+                    menuEntry != 'N')
+        {
+            System.out.println("Invalid Entry, please try again");
+        }
+    }
+    
+    public void clearGrid(Board theBoard)
+    {
+        theBoard.clear();
+        System.out.println("Board Cleared");
+    }
+    
+    public void readGrid(Board theBoard)
+    {
+        //Prompt user for file to read, puts it in fileScanner
+        System.out.println("File to open: ");
+        String fileName = keyboard.next();        
+        try
+        {
+            Scanner fileScanner = new Scanner(new File (fileName));
+            
+            for(int i=0; fileScanner.hasNext(); i++) 
+            {
+                theBoard.readFile(i, fileScanner.nextLine());
+            }
+            
+            System.out.println("File Read Successfully");
+        }
+        catch(FileNotFoundException e)
+        {
+            System.out.println("invalid file");
+        }
+    }
+    
+    public void dispGrid(Board theBoard)
+    {
+        System.out.println(theBoard.toString());
+    }
+    
+    public void setGridVal(Board theBoard)
+    {
+        System.out.println("Setting a value...\n\tenter row: ");
+        int theRow = keyboard.nextInt();
+        System.out.println("\tenter column: ");
+        int theCol = keyboard.nextInt();
+        System.out.println("\tenter new value (or 0 to clear): "); //MAKE SURE TO MAKE THIS WORK!
+        char theVal = keyboard.next().charAt(0);
+        if( theVal == '0')
+            theVal = ' ';
+        theBoard.setVal(theRow, theCol, theVal); 
+    }
+    
+    public void verify(Board theBoard)
+    {
+        theBoard.verify();
+    }
+    
+    public void writeGrid()
+    {
+    }  
+    
+    public void quit()
+    {
+        System.exit(0);
+    }
+    
+    public String toString()
+    {
+        return "Available Options" + 
+                            "\n\tC – Clear the grid" +
+                            "\n\tR – Read a Sudoku grid from a file" +
+                            "\n\tD – Display the current grid" +
+                            "\n\tS – Set a value in the grid" +
+                            "\n\tV – Verify the current grid" +
+                            "\n\tW – Write the current grid to a file" +
+                            "\n\tQ - Quit";
+    }
+    
+}

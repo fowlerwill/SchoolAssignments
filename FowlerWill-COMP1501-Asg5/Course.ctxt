@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=subject\ number\ letterGrade
+comment0.target=Course(java.lang.String,\ int,\ java.lang.String)
+comment1.params=
+comment1.target=java.lang.String\ getSubject()
+comment2.params=subject
+comment2.target=void\ setSubjec(java.lang.String)
+comment3.params=
+comment3.target=int\ getNumber()
+comment4.params=number
+comment4.target=void\ setNumber(int)
+comment5.params=
+comment5.target=java.lang.String\ getLetterGrade()
+comment6.params=letterGrade
+comment6.target=void\ setLetterGrade(java.lang.String)
+comment7.params=
+comment7.target=double\ getGradePoint()
+comment8.params=
+comment8.target=java.lang.String\ toString()
+numComments=9

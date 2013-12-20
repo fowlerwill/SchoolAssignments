@@ -1,0 +1,64 @@
+public class ChessBoard
+{
+    private final int BOARD_SIZE = 8;
+    private ChessPiece[][] gameBoard;
+    
+    public ChessBoard()
+    {
+        gameBoard = new ChessPiece[BOARD_SIZE][BOARD_SIZE];
+        //make pawns
+        for(int i=0; i<8; i++)
+        {
+            gameBoard[i][1] = new Pawn(i,1,1, this);
+        }
+        for(int i=0; i<8; i++)
+        {
+            gameBoard[i][6] = new Pawn(i,6,0, this);
+        }
+    }
+    
+    public ChessPiece selectPiece(int col, int row)
+    {
+        return gameBoard[col][row];
+    }
+    
+    public void updatePieceLocation(ChessPiece piece)
+    {
+        gameBoard[piece.getCol()][piece.getRow()] = piece;   
+    }
+    
+    public void removePieceAtLocation(int row, int col)
+    {
+        gameBoard[col][row] = null;
+    }
+    
+    public String toString()
+    {
+        int row, col;
+        String returnString = "      x    \n  01234567\n";
+        
+                
+        for(row = 0; row < BOARD_SIZE; row++)
+        {
+            for(col = 0; col < BOARD_SIZE; col++)
+            {
+                if( col == 0 )
+                {
+                    if( row == 4 )
+                        returnString += "y" + row;
+                    else
+                        returnString += " " + row;
+                }
+                
+                if(gameBoard[col][row] == null)
+                    returnString += " ";
+                else
+                    returnString += gameBoard[col][row].toString();
+            }
+            returnString += "\n";
+        }
+        
+        return returnString;
+    }
+            
+}

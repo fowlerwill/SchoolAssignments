@@ -1,0 +1,64 @@
+import java.util.Scanner;
+public class TestGame
+{
+
+    public TestGame()
+    {
+        ChessBoard theGame = new ChessBoard();
+        
+        System.out.println("hello, put the into here");
+        
+        System.out.print(theGame);
+
+        Scanner keyboard = new Scanner(System.in);
+        char input;
+        int[] selectedSpace;
+        
+        do
+        {
+            /**
+             * Select Piece Menu
+             */
+
+            do
+            {
+                System.out.print("selectedSpace = querySpace(theGame);
+           
+            
+            System.out.println( "\n" + theGame.selectPiece(selectedSpace[0],selectedSpace[1]).toString() + 
+                                theGame.selectPiece(selectedSpace[0],selectedSpace[1]).getPos() + "  Selected");  
+            
+            input = keyboard.next().toUpperCase().charAt(0);
+            
+            /**
+             * Destination Menu
+             */
+            if(input == 'P')
+            { 
+                theGame.selectPiece(selectedSpace[0],selectedSpace[1]).move();
+                System.out.print(theGame);
+            }
+        }
+        while(input != 'Q');
+        
+    }
+    /**
+     * querySpace() is a menu to prompt the user and returns an
+     * int array of the spaces selected
+     */
+    public int[] querySpace(ChessBoard board)
+    {
+        Scanner keyboard = new Scanner(System.in);
+        String querySpaceInput;
+        int[] returnInt = new int[2];
+        do
+            {
+                System.out.println("point x followed by y (e.g. \"1 2\"):");
+                querySpaceInput = keyboard.nextLine();
+                returnInt[0] = Character.getNumericValue(querySpaceInput.charAt(0));
+                returnInt[1] = Character.getNumericValue(querySpaceInput.charAt(2));                
+            }
+        while(board.selectPiece(returnInt[0],returnInt[1]) == null);
+        return returnInt;
+    }
+}

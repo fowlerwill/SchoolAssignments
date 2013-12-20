@@ -1,0 +1,72 @@
+import java.text.*;
+
+public class main
+{
+    public static void main(String args[])
+    {
+        DecimalFormat dec2 = new DecimalFormat("#.##");
+        //Sceneario 1 - Instantiate objects & print initial values
+        
+        Inventory object1 = new Inventory(12345, "Widgets", 773, 1.45, 2.03);
+        Inventory object2 = new Inventory(987654, "Gadget", 534, 2.36, 2.95);
+        
+        System.out.println( "-----------------------" +
+                            "\nItem No:\t" + object1.getItemNo() + 
+                            "\nItem Name:\t" + object1.getItemName() +
+                            "\nUnit Cost:\t" + object1.getUnitCost() +
+                            "\nSelling Price:\t" + object1.getSellPrice()+
+                            "\n-----------------------");
+        System.out.println( "-----------------------" +
+                            "\nItem No:\t" + object2.getItemNo() + 
+                            "\nItem Name:\t" + object2.getItemName() +
+                            "\nUnit Cost:\t" + object2.getUnitCost() +
+                            "\nSelling Price:\t" + object2.getSellPrice()+
+                            "\n-----------------------");
+                            
+        //Scenario 2 - Order + print 
+        
+        System.out.print(object1.orderItems(528));
+        System.out.print(object2.orderItems(343));
+        
+        //Scenario 3 - unit cost of Gadget changed by 12% | increased its selling price by 63 cents.
+        
+        object2.setUnitCost(object2.getUnitCost() * 1.12);
+        object2.setSellPrice(object2.getSellPrice() + .63);
+        
+        System.out.print("\nNew " + object2.getItemName() + " unit cost: " + dec2.format(object2.getUnitCost()));
+        System.out.print("\nNew " + object2.getItemName() + " sell price: " + dec2.format(object2.getSellPrice()));
+        
+        //Scenario 4 - customer orders 266 units of Widgets and 478 units of Gadgets
+        
+        System.out.print("\n" + object1.custOrder(266) +"\n"+  object2.custOrder(478));
+        
+        //Scenario 5 - 500 units of Widgets and 343 units of Gadgets received
+        
+        System.out.print("\n" + object1.receiveItems(500) +"\n"+  object2.receiveItems(343));
+          
+        //Scenario 6 - ship all widget order, half of gadget order | Calc & print the profit on each product and the total profit
+        
+        int allObject1 = object1.getCommitted();
+        int halfObject2 = object2.getCommitted() / 2;
+        
+        System.out.print("\n" + object1.shipItems( allObject1 ));
+        System.out.print("\n" + object2.shipItems( halfObject2 ));
+        
+        double object1Profit = object1.getSellPrice() - object1.getUnitCost();
+        double object2Profit = object2.getSellPrice() - object2.getUnitCost();
+        
+        System.out.print("\nProfit from " + object1.getItemName() + ": " + dec2.format(object1Profit));
+        System.out.print("\nProfit from " + object2.getItemName() + ": " + dec2.format(object2Profit));
+        System.out.print("\nTotal Profit: " + dec2.format((object1Profit * allObject1) + (object2Profit * halfObject2)));
+        
+        //Scenario 7 - 125 units of Widget returned to supplier
+        
+        System.out.print("\n" + object1.returnItems(125) );
+        
+        //Scenario 8 - report details of each item and calc total inventory value
+        
+        System.out.print("\n-----------------------\n" + object1 + "\n-----------------------\n" +
+                        "\n-----------------------\n" + object2 + "\n-----------------------\n" + 
+                        "Total Inventory Value:\t$" + dec2.format(object1.calcInvValue() + object2.calcInvValue()));
+    }
+}
